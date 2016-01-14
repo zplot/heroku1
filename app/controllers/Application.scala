@@ -17,5 +17,10 @@ object Application extends Controller {
     Ok(views.html.prueba2("Hola Luis"))
   }
 
+  def prueba3 = Action {
+    Ok(views.html.prueba3("Hola Luis"))
+  }
+
+
 }
 
