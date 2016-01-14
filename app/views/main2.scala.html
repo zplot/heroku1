@@ -1,4 +1,4 @@
-@(message: String)
+@(title: String)(content: Html)
 
 
 <!DOCTYPE html>
@@ -89,7 +89,7 @@
                             <!-- Contact Details -->
                         <div id="contact-details">
                             <ul>
-                                <li><i class="fa  fa-envelope"></i><a href="#">support@@centum.com</a></li>
+                                <li><i class="fa  fa-envelope"></i><a href="#">luis@@algebracode.com</a></li>
                                 <li><i class="fa fa-phone"></i>+48 880 450 120</li>
                             </ul>
                         </div>
@@ -165,23 +165,7 @@
                 <!-- LayerSlider Container -->
             <div class="layerslider-container">
 
-                <h1>Esto es un h1</h1>
-                <h2>Esto es un h2</h2>
-                <h3>Esto es un h3</h3>
-                <h4>Esto es un h4</h4>
-                <h5>Esto es un h5</h5>
-                <h6>Esto es un h6</h6>
-                <p>kjkksdj ks ksj gksgj gksjdg skjg ksjkjs ksjg skjgksjgkjsgdf kshjg ksjhg kshjdg ksjhg khjg kjskjd
-                    kjsdfgksjhdgf ksjhgdfk sjhg sk skjfg sjdgksjh gfjhdsgksjdf hgksjhdg skj gksgf</p>
-                <p>kjkksdj ks ksj gksgj gksjdg skjg ksjkjs ksjg skjgksjgkjsgdf kshjg ksjhg kshjdg ksjhg khjg kjskjd
-                    kjsdfgksjhdgf ksjhgdfksjhg sk skjfg sjdgksjhgfjhdsgksjdfhgksjhdg skj gksgf</p><p>kjkksdj ks ksj gksgj gksjdg skjg ksjkjs ksjg skjgksjgkjsgdf kshjg ksjhg kshjdg ksjhg khjg kjskjd
-                kjsdfgksjhdgf ksjhgdfksjhg sk skjfg sjdgksjhgfj hdsgks jdfhgk sjhdg skj gksgf</p>
-                <p>kjkksdj ks ksj gksgj gksjdg skjg ksjkjs ksjg skjgksjgkjsgdf kshjg ksjhg kshjdg ksjhg khjg kjskjd
-                    kjsdfgksjhdgf ksjhgdfksjhg sk skjfg sjd gksjhgfj hdsgksj fhgksj hdg skj gksgf</p>
-                <p>kjkksdj ks ksj gksgj gksjdg skjg ksjkjs ksjg skjgksjgkjsgdf kshjg ksjhg kshjdg ksjhg khjg kjskjd
-                    kjsdfgksjhdgf ksjhgdfksjhg sk skjfg sjdgks jhgfjhdsg ksjdfhgksjh dg skj gksgf</p>
-                <p>kjkksdj ks ksj gksgj gksjdg skjg ksjkjs ksjg skjgksjgkjsgdf kshjg ksjhg kshjdg ksjhg khjg kjskjd
-                    kjsdfgksjhdgf ksjhgdfksjhg sk skjfg sjdgks jhgfj hdsg ksjdfhgks jhdg skj gksgf</p>
+               @content
 
 
 
@@ -244,7 +228,7 @@
                 <div class="four columns">
                     <div class="picture"><a href="single_project.html"><img src='@routes.Assets.at("images/portfolio/portoflio-09.jpg")' alt=""/><div class="image-overlay-link"></div></a></div>
                     <div class="item-description">
-                        <h5><a href="#">Le he pasado el texto: @message</a></h5>
+                        <h5><a href="#">Muchos limones</a></h5>
                         <p>Mauris sit amet ligula est, eget conseact etur lectus maecenas hendrerit suscipit.</p>
                     </div>
                 </div>
@@ -346,20 +330,20 @@
                     <div class="footer-headline"><h4>Latest Tweets</h4></div>
                     <ul id="twitter"></ul>
                     <script type="text/javascript">
-					jQuery(document).ready(function($){
-                        $.getJSON('twitter.php?url='+encodeURIComponent('statuses/user_timeline.json?screen_name=Vasterad&count=2'), function(tweets){
-                            $("#twitter").html(tz_format_twitter(tweets));
-                        }); });
-				</script>
+                            jQuery(document).ready(function($){
+                                $.getJSON('twitter.php?url='+encodeURIComponent('statuses/user_timeline.json?screen_name=Vasterad&count=2'), function(tweets){
+                                    $("#twitter").html(tz_format_twitter(tweets));
+                                }); });
+                    </script>
                     <div class="clear"></div>
                 </div>
 
                     <!-- Footer / Bottom -->
                 <div class="sixteen columns">
                     <div id="footer-bottom">
-				© Copyright 2015 by <a href="#">Vasterad</a>. All rights reserved.
+                        © Copyright 2015 by <a href="#">Vasterad</a>. All rights reserved.
                         <div id="scroll-top-top"><a href="#"></a></div>
-			</div>
+                    </div>
                 </div>
 
             </div>
@@ -376,4 +360,3 @@
 
     </body>
 </html>
-
