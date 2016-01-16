@@ -42,6 +42,13 @@ object Application extends Controller {
     Ok(views.html.prueba5(titulo))
   }
 
+  def prueba6 = Action {
+    val title = "Esto es el título"
+    val tree1 = Tree(List(Tree(List()), Tree(List()), Tree(List())))
+    val parameters = (title, tree1)
+    Ok(views.html.prueba6(parameters))
+  }
+
 
 }
 
