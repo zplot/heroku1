@@ -37,6 +37,11 @@ object Application extends Controller {
     Ok(views.html.hopf1(t8.toString))
   }
 
+  def prueba5 = Action {
+    val titulo = "Hola a ver ahora"
+    Ok(views.html.prueba5(titulo))
+  }
+
 
 }
 

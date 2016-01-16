@@ -9,6 +9,7 @@ GET     /prueba2                    controllers.Application.prueba2
 GET     /prueba3                    controllers.Application.prueba3
 GET     /prueba4                    controllers.Application.prueba4
 GET     /hopf1                      controllers.Application.hopf1
+GET     /prueba5                    controllers.Application.prueba5
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
