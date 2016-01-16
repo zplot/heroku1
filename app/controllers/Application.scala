@@ -3,6 +3,8 @@ package controllers
 import play.api._
 import play.api.mvc._
 
+
+
 object Application extends Controller {
 
   def index = Action {
@@ -45,7 +47,15 @@ object Application extends Controller {
   def prueba6 = Action {
     val title = "Esto es el título"
     val tree1 = Tree(List(Tree(List()), Tree(List()), Tree(List())))
-    val parameters = (title, tree1)
+
+
+
+    val node1 = Node(40, 50, 5, "red")
+    val node2 = Node(60, 50, 5, "red")
+    val node3 = Node(80, 50, 5, "red")
+    val nodeList = List[Node](node1, node2, node3)
+
+    val parameters = (title, nodeList)
     Ok(views.html.prueba6(parameters))
   }
 
